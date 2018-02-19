@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" href="icon/home.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="icon/home.ico" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <link rel="stylesheet" type="text/css" href="bar.css">
+  <link rel="stylesheet" type="text/css" href="portfolio.css">
+
+  <!-- font -->
+  <link rel="stylesheet" type="text/css" href="open-sans.css">
+
+  <title>PEI-YUN WU</title>
+
+</head>
+<body>
+
+  <!-- bar -->
+
+  <nav>
+     <div id="myNavbar">
+      <!-- Navbar (sit on top) -->
+    <div class="bar">
+      <div class="container">
+      <a href="index.html" ><h2 class="name">PEI-YUN WU</h2></a>
+      <a class="bar-item button hide-medium hide-large right toggle" href="javascript:void(0);" onclick="toggleFunction()" style="color: #444;">
+      <div class="menu" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      </a>
+      
+      <a href="contact.html" class="bar-item button hide-small right pad">CONTACT</a>
+<!--       <a href="#about" class="bar-item button hide-small right">ABOUT</a> -->
+      <a href="index.html" class="bar-item button hide-small right">PORTFOLIO</a></div>
+
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+    <div id="navDemo" class="bar-block graybutton hide hide-large hide-medium">
+      <a href="index.html" class="bar-item button" onclick="toggleFunction()">PORTFOLIO</a>
+<!--       <a href="#about" class="bar-item button" onclick="toggleFunction()">ABOUT</a> -->
+      <a href="contact.html" class="bar-item button" onclick="toggleFunction()">CONTACT</a>
+    </div>
+
+  </nav>
+
+  <!-- <div class="bgimg1"></div> -->
+
+  <!-- <div id="portfolio"></div>-->
+
+  <main>
+
+    <p style="margin: 0; font-size: 10px; margin-top: 60px;">&nbsp;</p>
+
+    <div class="container2">
+    <h1 class="category">Portfolio</h1>
+    <p class="date">｜A look at my projects｜</p>
+    <!-- <div class="post-line"></div> -->
+    <p style="margin: 0; font-size: 40px">&nbsp;</p> 
+    </div>
+  
+    <!-- Grid -->
+
+    <div class="container3">
+    <div class="col-group">
+
+
+      <div class="col wid">
+        <a href="businesscard.html">
+          <img src="img/squcard.jpg" alt="Typography Business Card" style="width:100%">
+          <h3 class="project">Typography Business Card</h3></a>
+          <div class="desc"><a href="">Graphic Design</a></div>
+      </div>
+
+      <div class="col wid">
+        <a href="oldhousefilm.html">
+        <img src="img/squpost.jpg" alt="The Remains of the Mansion" style="width:100%">
+          <h3 class="project">The Remains of the Mansion</h3></a>
+          <div class="desc"><a href="">Short Film</a></div>
+      </div>
+
+      <div class="col wid">
+        <a href="#">
+        <img src="img/frog2.jpg" alt="Frog Film" style="width:100%">
+          <h3 class="project">Want to Cross the Road</h3></a>
+          <div class="desc"><a href="">Short Film</a></div>
+      </div>
+
+      <div class="col wid">
+        <a href="#">
+        <img src="http://www.andrewsgibson.com/blog/wp-content/uploads/2010/11/mt-7.jpg" alt="" style="width:100%">
+          <h3 class="project">Zoo Project</h3></a>
+          <div class="desc"><a href="">Interactive Design</a></div>
+      </div>
+
+      <div class="col wid">
+        <a href="#">
+        <img src="img/giphy.gif" alt="" style="width:100%">
+          <h3 class="project">Project Title</h3></a>
+          <div class="desc"><a href="">Short Film</a></div>
+      </div>
+
+      <div class="col wid">
+        <a href="#">
+        <img src="img/3d.png" alt="" style="width:100%">
+          <h3 class="project">3D</h3></a>
+          <div class="desc"><a href="">3D Model</a></div>
+      </div>
+
+
+    </div>
+    </div>
+  </main>
+
+    <!-- footer -->
+  <footer>
+    <p>&copy; <time datetime="2018-01-25 05:59:31 +0000">2018</time>
+      <a href="" class="author">Pei-Yun Wu</a>. All Rights Reserved. 
+    </p>
+  </footer>
+
+  <!-- java -->
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+
+  <script type="text/javascript">
+
+  //   $(window).scroll(function(event){
+
+  //   var yOffset = window.pageYOffset;
+  //   var breakpoint = 50;
+  //   if (yOffset > breakpoint){
+  //     $("nav").addClass('active');
+  //   }else{
+  //     $("nav").removeClass('active');
+  //   }
+
+  // });
+
+    // Change style of navbar on scroll
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            navbar.className = "bar" + " card" + " animate-top" + " white";
+        } else {
+            navbar.className = navbar.className.replace(" card animate-top white", "");
+        }
+    }
+
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("show") == -1) {
+            x.className += " show";
+        } else {
+            x.className = x.className.replace(" show", "");
+        }
+    }
+
+    // ham
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+
+ </script>
+
+</body>
+</html>
+
